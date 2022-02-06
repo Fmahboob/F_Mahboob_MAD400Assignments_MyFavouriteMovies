@@ -1,1 +1,4 @@
-<p>content-list works!</p>
+<ul>
+    <app-content-card *ngFor="let item of list; index as i; last as isLast; first as isFirst" 
+    [content]="item" [class.is-first]="isFirst" 
+    [class.is-last]="isLast"></app-content-card>
