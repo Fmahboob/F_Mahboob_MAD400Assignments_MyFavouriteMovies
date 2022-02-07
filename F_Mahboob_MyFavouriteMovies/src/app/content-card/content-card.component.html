@@ -1,5 +1,5 @@
 <li *ngIf="content">
-    <hi class="title">{{ content?.title }}</hi>
+    <h1 class="title">{{ content?.title }}</h1>
     <a (click) ="log()" clickable>
         <img *ngIf="content?.imgURL" src ="{{ content?.imgURL }}">
     </a>
