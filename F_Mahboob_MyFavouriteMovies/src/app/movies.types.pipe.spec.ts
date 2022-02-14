@@ -1,8 +1,8 @@
-import { Movies.TypesPipe } from './movies.types.pipe';
+import { MoviesTypesPipe } from './movies.types.pipe';
 
 describe('Movies.TypesPipe', () => {
   it('create an instance', () => {
-    const pipe = new Movies.TypesPipe();
+    const pipe = new MoviesTypesPipe();
     expect(pipe).toBeTruthy();
   });
 });

@@ -1,7 +1,7 @@
-import { Content } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
 import { watch } from 'fs';
 import { title } from 'process';
+import { Content } from '../helper-files/content-interface';
 
 @Component({
   selector: 'app-content-list',

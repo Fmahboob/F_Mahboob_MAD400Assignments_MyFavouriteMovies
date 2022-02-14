@@ -1,12 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Content } from './helper-files/content-interface';
+
 
 @Pipe({
   name: 'moviesTypes'
 })
-export class Movies.TypesPipe implements PipeTransform {
+export class MoviesTypesPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
-  }
+  transform(watchList: Content[], type?: string){
+    return watchList.filter(watches => watches.type == type ? watchList : null);
+}
 
 }
