@@ -1,4 +1,13 @@
+<div id="search">
+    input #searchTitle>
+    <br>
+    <button (click)="searchContent(searchTitle.value)">Search</button>
+    <h3 class="outputText">{{ searchContent(searchTitle.value) }}</h3>
+</div>
+
 <ul>
-    <app-content-card *ngFor="let item of list; index as i; last as isLast; first as isFirst" 
-    [content]="item" [class.is-first]="isFirst" 
-    [class.is-last]="isLast"></app-content-card>
+    <app-content-card *ngFor="let item of (list | type);" [content]="item" id="{{ item.Title }}"></app-content-card>
+    <app-content-card *ngFor="let item of (list | type: horror);" [content]="item" id="{{ item.Title }}"></app-content-card>
+    <app-content-card *ngFor="let item of (list | type: action);" [content]="item" id="{{ item.Title }}"></app-content-card>
+    <app-content-card *ngFor="let item of (list | type: comedy);" [content]="item" id="{{ item.Title }}"></app-content-card>
+    

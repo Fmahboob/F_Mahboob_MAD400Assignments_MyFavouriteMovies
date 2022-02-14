@@ -1,5 +1,6 @@
 import { Content } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit } from '@angular/core';
+import { watch } from 'fs';
 import { title } from 'process';
 
 @Component({
@@ -8,15 +9,10 @@ import { title } from 'process';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-  list: Content[] = [];
+  lists: Content[] = [];
 
   constructor() { 
-
-  }
-
-  ngOnInit(): void {
-
-    this.list = [{
+    this.lists = [{
       id: 0,
       title: 'The Royal Treatment',
       description: 'New York hairdresser Izzy seizes the chance to work at the wedding of a charming prince. When sparks start to fly between the two of them, love and duty are put to the test as the time of the wedding draws closer.',
@@ -69,7 +65,34 @@ export class ContentListComponent implements OnInit {
       type: 'Action',
       tags: []
     }
+    {
+  
+      id: 6,
+      title: 'Nomadland',
+      description: 'A woman in her sixties who, after losing everything in the Great Recession, embarks on a journey through the American West, living as a van-dwelling modern-day nomad.',
+      creator: 'Chloé Zhao',
+      imgURL: 'https://m.media-amazon.com/images/I/81HGoyM9atS._SL1500_.jpg',
+      type: 'horror'
+    }
     ];
+
+  }
+  FetchContent(searchString : String): String{
+    var result = 'no';
+    if(searchString.length == 0){
+      result = 'null';
+    }
+    for (var movie of this.lists ){
+      if(watch.title.toUpperCase() === searchString.toUpperCase()){
+        result = "yes";
+      }
+    }
+    return result;
+  }
+
+  ngOnInit(): void {
+
+    
   }
 }
 
