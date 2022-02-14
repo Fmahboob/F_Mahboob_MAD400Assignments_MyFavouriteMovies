@@ -7,7 +7,7 @@
 
 <ul>
     <app-content-card *ngFor="let item of (list | type);" [content]="item" id="{{ item.Title }}"></app-content-card>
-    <app-content-card *ngFor="let item of (list | type: horror);" [content]="item" id="{{ item.Title }}"></app-content-card>
-    <app-content-card *ngFor="let item of (list | type: action);" [content]="item" id="{{ item.Title }}"></app-content-card>
-    <app-content-card *ngFor="let item of (list | type: comedy);" [content]="item" id="{{ item.Title }}"></app-content-card>
+    <app-content-card *ngFor="let item of (list | type: Horror);" [content]="item" id="{{ item.Title }}"></app-content-card>
+    <app-content-card *ngFor="let item of (list | type: Action);" [content]="item" id="{{ item.Title }}"></app-content-card>
+    <app-content-card *ngFor="let item of (list | type: Comedy);" [content]="item" id="{{ item.Title }}"></app-content-card>
     
