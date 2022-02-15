@@ -8,7 +8,7 @@
     <p class="desc">{{ content?.description }}</p>
     <h2>Genre</h2>
     <h3 *ngIf="content?.type" class="type">{{ content?.type }}</h3>
-    <div *ngIf="Content?.tags" class="dropdown">
+    <div *ngIf="content?.tags" class="dropdown">
         <button class="dropbtn">Tags</button>
         <div class="dropdown-content">
             <a *ngFor="let tag of contnet?.tags">{{ tag }}</a>
