@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { title } from 'process';
+
 import { Content } from '../helper-files/content-interface';
 
 @Component({
